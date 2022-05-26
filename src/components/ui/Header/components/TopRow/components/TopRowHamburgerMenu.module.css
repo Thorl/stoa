@@ -1,0 +1,82 @@
+.header__topRow__hamburgerMenu__hamburger {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.5rem 0.5rem 0.5rem 1.5rem;
+
+  cursor: pointer;
+}
+
+.header__topRow__hamburgerMenu__hamburger__burger {
+  z-index: 50;
+
+  width: 2.5rem;
+  height: 0.3rem;
+
+  border-radius: 1rem;
+  background-color: #000;
+  transform-origin: 0.1rem;
+  transition: all 0.3s linear;
+}
+
+.header__topRow__hamburgerMenu__hamburger__burger1 {
+  transform: rotate(35deg);
+}
+
+.header__topRow__hamburgerMenu__hamburger__burger2 {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.header__topRow__hamburgerMenu__hamburger__burger3 {
+  transform: rotate(-35deg);
+}
+
+.header__topRow__hamburgerMenu__menuTitle {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+}
+
+.header__topRow__hamburgerMenu__dropdownMenu {
+  position: fixed;
+  z-index: -30;
+  top: 4.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  height: 22rem;
+  width: 20rem;
+  margin: 0.5rem 0 0 0;
+
+  visibility: hidden;
+  transform: translateY(-30rem);
+  transition: all 0.4s ease-in-out;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Cinzel";
+  line-height: 3rem;
+  border-right: 0.1rem solid #ff6900;
+  border-bottom: 0.1rem solid #ff6900;
+  background-color: #ffff;
+  list-style: none;
+}
+
+.header__topRow__hamburgerMenu__dropdownMenu_show {
+  visibility: visible;
+  transform: translateY(0rem);
+}
+
+@media (min-width: 1279px) {
+  .header__topRow__hamburgerMenu__hamburger {
+    display: none;
+  }
+
+  .header__topRow__hamburgerMenu__dropdownMenu {
+    display: none;
+  }
+}
